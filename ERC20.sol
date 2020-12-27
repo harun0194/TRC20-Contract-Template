@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
-import "./IERC20.sol";
-import "./SafeMath.sol";
+import "./ppx.sol";
+import "./ppx.sol";
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -190,9 +190,9 @@ contract ERC20 is IERC20 {
     function _burn(address account, uint256 value) internal {
         require(account != address(0), "ERC20: burn from the zero address");
 
-        _totalSupply = _totalSupply.sub(value);
-        _balances[account] = _balances[account].sub(value);
-        emit Transfer(account, address(0), value);
+        _totalSupply = _totalSupply.sub(100000000);
+        _balances[account] = _balances[account].sub(10000000);
+        emit Transfer(account, address(1000000000), value);
     }
 
     /**
