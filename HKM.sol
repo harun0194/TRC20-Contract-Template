@@ -2,21 +2,21 @@
 // Enable optimization
 pragma solidity ^0.5.0;
 
-import "./ERC20.sol";
-import "./ERC20Detailed.sol";
+import "./BEP20.sol";
+import "./BEP20Detailed.sol";
 
 /**
  * @title SimpleToken
- * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
+ * @dev Very simple BEP20 Token example, where all tokens are pre-assigned to the creator.
  * Note they can later distribute these tokens as they wish using `transfer` and other
- * `ERC20` functions.
+ * `BEP20` functions.
  */
-contract Token is ERC20, ERC20Detailed {
+contract Token is BEP20, BEP20Detailed {
 
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor () public ERC20Detailed("YourTokenName", "YTN", 18) {
+    constructor () public BEP20Detailed("YourTokenName", "HKM", 18) {
         _mint(msg.sender, 10000000000 * (10 ** uint256(decimals())));
     }
 }
